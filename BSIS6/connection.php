@@ -11,7 +11,7 @@ if (mysqli_connect_error()) {
     echo "Error: Unable to connect to MySQL. <br>";
     echo "Message: " . mysqli_connect_error();
 } else {
-    echo "Successfully Connected!";
+    echo "Sakses Connected";
 
 }
 ?>
