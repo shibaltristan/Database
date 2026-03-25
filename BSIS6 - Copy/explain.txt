@@ -1,0 +1,9 @@
+Session Management:
+Added $_SESSION['UserID'] in check_login.php to store the logged-in user's ID.
+Saving Products:
+Updated save_picture.php to include the UserID when inserting new records, so each upload is tied to the user.
+Dashboard Filtering:
+Modified dashboard.php to filter the query by the logged-in user's UserID, including in the search functionality.
+Also changed the table to display the record ID instead of UserID for clarity.
+Edit/Delete Operations:
+Updated edit.php, update.php, and delete.php to use the record's id (primary key) instead of UserID for operations, ensuring each record is uniquely identified.
