@@ -5,7 +5,7 @@ if(isset($_POST['update'])) {
     $id = $_POST['id'];
     $product = $_POST['product'];
 
-    $get = mysqli_query($connection, "SELECT Picture FROM crubtbl5 WHERE UserID='$id'");
+    $get = mysqli_query($connection, "SELECT Picture FROM crubtbl5 WHERE id='$id'");
     $data = mysqli_fetch_assoc($get);
 
     $old_picture = $data['Picture'];
@@ -26,12 +26,12 @@ if (file_exists($oldpath)) {
 
 $query = "UPDATE crubtbl5
           SET Product='$product', Picture='$new_picture' 
-          WHERE UserID='$id'";
+          WHERE id='$id'";
 
 } else {
     $query = "UPDATE crubtbl5
               SET Product='$product' 
-              WHERE UserID='$id'";
+              WHERE id='$id'";
 }
 
 mysqli_query($connection, $query);

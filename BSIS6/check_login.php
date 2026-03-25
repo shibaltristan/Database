@@ -17,6 +17,7 @@ if (isset($_POST['login'])){
 
        $row = mysqli_fetch_assoc($result);
        // SAVE USER DATA SA SESSION
+        $_SESSION['UserID'] = $row['UserID'];
         $_SESSION['Email'] = $row['Email'];
         $_SESSION['FirstName'] = $row['FirstName'];
         

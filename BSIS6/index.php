@@ -2,36 +2,70 @@
 <html>
 <head>
 <title>Registration</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+</style>
 </head>
 
 <body>
 
-<h2>Account Registration</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card p-4">
+                <h2 class="text-center mb-4">Account Registration</h2>
 
 <form action="save.php" method="post">
 
-<label>First Name:</label><br>
-<input type="text" name="FN" required><br><br>
+<div class="mb-3">
+    <label class="form-label">First Name:</label>
+    <input type="text" name="FN" class="form-control" required>
+</div>
 
-<label>Last Name:</label><br>
-<input type="text" name="LN" required><br><br>
+<div class="mb-3">
+    <label class="form-label">Last Name:</label>
+    <input type="text" name="LN" class="form-control" required>
+</div>
 
-<label>Middle Name:</label><br>
-<input type="text" name="MN"><br><br>
+<div class="mb-3">
+    <label class="form-label">Middle Name:</label>
+    <input type="text" name="MN" class="form-control">
+</div>
 
-<label>Email Address:</label><br>
-<input type="email" name="Email" required><br><br>
+<div class="mb-3">
+    <label class="form-label">Email Address:</label>
+    <input type="email" name="Email" class="form-control" required>
+</div>
 
-<label>Password:</label><br>
-<input type="password" name="password" required><br><br>
+<div class="mb-3">
+    <label class="form-label">Password:</label>
+    <input type="password" name="password" class="form-control" required>
+</div>
 
-<button type="submit" name="save">Register</button>
+<button type="submit" name="save" class="btn btn-primary w-100">Register</button>
 
 </form>
 
-<br>
+<div class="text-center mt-3">
+    <p>Already registered? <a href="login.php" class="text-decoration-none">Sign in here</a></p>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<p>Already registered? <a href="login.php">Sign in here</a></p>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

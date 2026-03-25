@@ -2,27 +2,56 @@
 <html>
 <head>
 <title>Login</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+</style>
 </head>
 
 <body>
 
-<h2>Login</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card p-4">
+                <h2 class="text-center mb-4">Login</h2>
 
 <form action="check_login.php" method="post">
 
-<label>Email Address:</label><br>
-<input type="text" name="Email" required><br><br>
+<div class="mb-3">
+    <label class="form-label">Email Address:</label>
+    <input type="text" name="Email" class="form-control" required>
+</div>
 
-<label>Password:</label><br>
-<input type="password" name="Password" required><br><br>
+<div class="mb-3">
+    <label class="form-label">Password:</label>
+    <input type="password" name="Password" class="form-control" required>
+</div>
 
-<button type="submit" name="login">Login</button>
+<button type="submit" name="login" class="btn btn-primary w-100">Login</button>
 
 </form>
 
-<br>
+<div class="text-center mt-3">
+    <p>Don't have an account? <a href="index.php" class="text-decoration-none">Create Account</a></p>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<p>Don't have an account? <a href="index.php">Create Account</a></p>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
